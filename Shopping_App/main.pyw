@@ -212,7 +212,7 @@ def send_mail():
         # Saved successfully and email sent
         messagebox.showinfo(f'New List: {get_title}',\
                             'Shopping list saved in:\n'\
-                            f'"My Lists" folder as: {get_title}')
+                            f'"My Lists" folder\n\nEmail sent to:\n{get_to}')
     except:
         # Error message
         messagebox.showerror(\
