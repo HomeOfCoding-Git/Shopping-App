@@ -1,4 +1,4 @@
-# Shopping Basket with email (version 00.02)
+# Shopping Basket with email
 from tkinter import *
 from tkinter import ttk
 import os
