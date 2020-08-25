@@ -23,6 +23,7 @@ fg_error = '#A32627'
 error_font = 'Arial, 10'
 # Buttons
 bg_close_btn = '#A32627'
+entry_btn_font = 'Arial', 8
 
 
 # Create List Title
@@ -161,7 +162,6 @@ def new_list():
         if get_to in mail_cb['values']:
             
             pass
-            print('deleted..')
             
         if get_to not in mail_cb['values']:
 
@@ -177,7 +177,6 @@ def new_list():
 
 
                 mail_cb['values'] = address_list
-                print('saved..')
             
             except:
                 pass
@@ -266,7 +265,6 @@ def close_program():
         if get_to in mail_cb['values']:
             
             pass
-            print('deleted..')
             
         if get_to not in mail_cb['values']:
             
@@ -282,7 +280,6 @@ def close_program():
 
 
                 mail_cb['values'] = address_list
-                print('saved..')
             
             except:
                 pass
@@ -354,7 +351,7 @@ list_entry.pack()
 
 # List entry submit button
 list_btn = Button(\
-    list_frame, text='Create', bg=fg_color, fg=bg_color, font=('Arial', 8), relief='flat', command=list_title)
+    list_frame, text='Create', bg=fg_color, fg=bg_color, font=entry_btn_font, relief='flat', command=list_title)
 app.bind('<Return>', list_title)
 list_btn.pack(anchor='e')
 
