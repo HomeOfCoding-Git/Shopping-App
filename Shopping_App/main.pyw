@@ -385,6 +385,17 @@ close_btn = Button(\
     footer_frame, text='', bg=bg_color, fg=bg_color, font=font_size, relief='flat', command=close_program)
 close_btn.pack(side='left', fill='x', expand=True)
 
+# ______________________________________________________
+# Auto Populate New Directoties and file (if not exists)
+
+# Create My Lists Directory (if not exists)
+dir_name = 'My Lists/'
+if dir_name != os.path.basename(dir_name):
+    try:
+        os.mkdir(dir_name)
+    except:
+        pass
+
 # Create Email Addresses Directory (if not exists)
 dir_name = 'Emails_Book/'
 if dir_name != os.path.basename(dir_name):
@@ -413,6 +424,8 @@ try:
     mail_cb['values'] = address_list
 except:
     pass
+
+# ______________________________________________________
 
 # App defaults
 if __name__ == '__main__':
